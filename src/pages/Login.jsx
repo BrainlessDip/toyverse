@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   GoogleAuthProvider,
   GithubAuthProvider,
@@ -74,6 +74,11 @@ const Login = () => {
       }
     }
   };
+
+  useEffect(() => {
+    document.title = `Login | Toy Verse `;
+  }, []);
+
   return (
     <>
       <div className="flex justify-center items-center flex-col relative min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-74px)]">

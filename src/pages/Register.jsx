@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
@@ -34,12 +34,18 @@ const Register = () => {
       navigate("/");
     }
   };
+
   const handleGoogleSignin = async () => {
     const result = await handleSignin();
     if (result) {
       navigate("/");
     }
   };
+
+  useEffect(() => {
+    document.title = `Register | Toy Verse `;
+  }, []);
+
   return (
     <div className="flex justify-center items-center flex-col relative min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-74px)]">
       <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">

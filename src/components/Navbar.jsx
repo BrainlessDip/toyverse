@@ -2,12 +2,9 @@ import React, { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import Container from "./Container";
 import { Link, NavLink } from "react-router";
-import Login from "./../pages/Login";
-import { RxAvatar } from "react-icons/rx";
 
 const Navbar = () => {
   const { user, handleSignout } = useContext(AuthContext);
-  console.log(user);
 
   return (
     <>
@@ -45,6 +42,11 @@ const Navbar = () => {
                     Home
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink to={"/about"} className="text-[20px]">
+                    About
+                  </NavLink>
+                </li>
                 {user && (
                   <li>
                     <NavLink to={"/profile"} className="text-[20px]">
@@ -54,7 +56,9 @@ const Navbar = () => {
                 )}
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl">Toy Verse</a>
+            <Link to={"/"} className="btn btn-ghost text-xl">
+              Toy Verse
+            </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -63,7 +67,11 @@ const Navbar = () => {
                   Home
                 </NavLink>
               </li>
-
+              <li>
+                <NavLink to={"/about"} className="text-[20px]">
+                  About
+                </NavLink>
+              </li>
               {user && (
                 <li>
                   <NavLink to={"/profile"} className="text-[20px]">

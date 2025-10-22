@@ -6,6 +6,10 @@ import Login from "../pages/Login";
 import axios from "axios";
 import ToyDetails from "../pages/ToyDetails";
 import Loading from "../components/Loading";
+import PrivateRoute from "./PrivateRoute";
+import NotFound from "../pages/NotFound";
+import About from "../pages/About";
+import Profile from "../pages/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -21,15 +25,23 @@ export const router = createBrowserRouter([
         },
       },
       {
-        Component: ToyDetails,
         path: "/:toyId",
+        element: (
+          <PrivateRoute>
+            <ToyDetails />
+          </PrivateRoute>
+        ),
         loader: async () => {
           return axios(`/data.json`);
         },
       },
       {
         path: "/profile",
-        Component: Home,
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
@@ -38,6 +50,18 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         Component: Register,
+      },
+      {
+        path: "/*",
+        Component: NotFound,
+      },
+      {
+        path: "/about",
+        element: (
+          <PrivateRoute>
+            <About />
+          </PrivateRoute>
+        ),
       },
     ],
   },
