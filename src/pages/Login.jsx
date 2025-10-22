@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import {
   GoogleAuthProvider,
   GithubAuthProvider,
@@ -9,12 +9,15 @@ import auth from "../firebase/firebase.init.js";
 import { useNavigate } from "react-router";
 import { AuthContext } from "./../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 const googleProvider = new GoogleAuthProvider();
 
 const Login = () => {
   const { setUser } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const emailRef = useRef();
 
   const handleSignin = async () => {
     try {
@@ -46,6 +49,7 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
       setUser(result.user);
@@ -91,18 +95,40 @@ const Login = () => {
               className="input focus:outline-0"
               name="email"
               placeholder="Email"
+              autoComplete="username"
+              ref={emailRef}
               required
             />
             <label className="label">Password</label>
-            <input
-              type="password"
-              className="input focus:outline-0"
-              placeholder="Password"
-              name="password"
-              required
-            />
+            <div className="relative w-full">
+              <input
+                type={showPassword ? "text" : "password"}
+                className="input focus:outline-0"
+                placeholder="Password"
+                name="password"
+                autoComplete="current-password"
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer text-2xl text-white hover:opacity-50"
+              >
+                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+              </button>
+            </div>
 
-            <button className="btn btn-neutral mt-4 w-full">Login</button>
+            <p
+              onClick={() =>
+                navigate("/forget-password", {
+                  state: emailRef.current.value,
+                })
+              }
+              className="text-sm my-2 text-left cursor-pointer text-blue-600 hover:text-blue-800 "
+            >
+              <span className="font-semibold">Forgot Password ?</span>
+            </p>
+            <button className="btn btn-neutral mt-0 w-full">Login</button>
             <p
               onClick={() => navigate("/register")}
               className="mt-1 text-[16px] text-center cursor-pointer text-blue-600 hover:text-blue-800 "

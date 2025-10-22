@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import NotFound from "../pages/NotFound";
 import About from "../pages/About";
 import Profile from "../pages/Profile";
+import ForgetPassword from "../pages/ForgetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -52,8 +53,8 @@ export const router = createBrowserRouter([
         Component: Register,
       },
       {
-        path: "/*",
-        Component: NotFound,
+        path: "/forget-password",
+        Component: ForgetPassword,
       },
       {
         path: "/about",
@@ -62,6 +63,10 @@ export const router = createBrowserRouter([
             <About />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/*",
+        Component: NotFound,
       },
     ],
   },

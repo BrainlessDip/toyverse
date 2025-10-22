@@ -57,6 +57,7 @@ const Register = () => {
             className="input focus:outline-0"
             name="name"
             placeholder="Name"
+            autoComplete="name"
             required
           />
 
@@ -66,6 +67,7 @@ const Register = () => {
             className="input focus:outline-0"
             name="photoURL"
             placeholder="Photo URL"
+            autoComplete="off"
             required
           />
 
@@ -75,6 +77,7 @@ const Register = () => {
             className="input focus:outline-0"
             name="email"
             placeholder="Email"
+            autoComplete="off"
             required
           />
 
@@ -84,6 +87,7 @@ const Register = () => {
             className="input focus:outline-0"
             placeholder="Password"
             name="password"
+            autoComplete="new-password"
             required
           />
 

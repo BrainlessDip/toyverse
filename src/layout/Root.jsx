@@ -7,8 +7,6 @@ import Loading from "../components/Loading";
 
 const Root = () => {
   const { loading } = use(AuthContext);
-  console.log(loading);
-
   return (
     <>
       {loading ? (
