@@ -5,11 +5,13 @@ import Register from "../pages/Register";
 import Login from "../pages/Login";
 import axios from "axios";
 import ToyDetails from "../pages/ToyDetails";
+import Loading from "../components/Loading";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    HydrateFallback: Loading,
     children: [
       {
         Component: Home,

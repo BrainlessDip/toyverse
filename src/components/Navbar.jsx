@@ -3,9 +3,11 @@ import { AuthContext } from "../provider/AuthProvider";
 import Container from "./Container";
 import { Link, NavLink } from "react-router";
 import Login from "./../pages/Login";
+import { RxAvatar } from "react-icons/rx";
 
 const Navbar = () => {
   const { user, handleSignout } = useContext(AuthContext);
+  console.log(user?.photoURL);
 
   return (
     <>
@@ -78,12 +80,13 @@ const Navbar = () => {
                   data-tip={user.displayName}
                   className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom tooltip-success"
                 >
-                  <div className="w-10 rounded-full">
-                    <img
-                      alt="Tailwind CSS Navbar component"
-                      src={user.photoURL}
-                    />
-                  </div>
+                  {user.photoURL ? (
+                    <div className="w-10 rounded-full">
+                      <img src={user.photoURL} />
+                    </div>
+                  ) : (
+                    <RxAvatar className="text-3xl" />
+                  )}
                 </div>
                 <button
                   className="btn btn-secondary"

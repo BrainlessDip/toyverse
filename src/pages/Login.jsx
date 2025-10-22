@@ -54,7 +54,7 @@ const Login = () => {
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
       setUser(result.user);
-      navigate("/profile");
+      navigate("/");
     } catch (error) {
       console.log(error);
 
@@ -83,7 +83,7 @@ const Login = () => {
     <>
       <div className="flex justify-center items-center flex-col relative min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-74px)]">
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-          <legend className="fieldset-legend">Login</legend>
+          <legend className="fieldset-legend text-4xl">Login</legend>
           <form onSubmit={handleEmailSignin}>
             <label className="label">Email</label>
             <input
@@ -99,7 +99,15 @@ const Login = () => {
               placeholder="Password"
               name="password"
             />
+
             <button className="btn btn-neutral mt-4 w-full">Login</button>
+            <p
+              onClick={() => navigate("/register")}
+              className="mt-1 text-[16px] text-center cursor-pointer text-blue-600 hover:text-blue-800 "
+            >
+              Don’t have an account?{" "}
+              <span className="font-semibold">Register now</span>
+            </p>
           </form>
           <div className="flex justify-around items-center mt-2">
             <button

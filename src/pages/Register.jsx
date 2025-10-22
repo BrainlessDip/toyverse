@@ -12,14 +12,14 @@ const Register = () => {
     const password = e.target.password.value;
     const result = await handleRegister(email, password);
     if (result) {
-      navigate("/profile");
+      navigate("/");
     }
   };
 
   return (
-    <div>
+    <div className="flex justify-center items-center flex-col relative min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-74px)]">
       <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-        <legend className="fieldset-legend">Login</legend>
+        <legend className="fieldset-legend text-4xl">Register</legend>
         <form onSubmit={registerUser}>
           <label className="label">Email</label>
           <input
