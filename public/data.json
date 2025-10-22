@@ -1,0 +1,74 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "pictureURL": "/LegoClassicBricks.png",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Hot Wheels Monster Truck",
+    "sellerName": "Speedy Toys Hub",
+    "sellerEmail": "sales@speedytoyshub.com",
+    "price": 14.5,
+    "rating": 4.5,
+    "availableQuantity": 120,
+    "description": "A durable and exciting Hot Wheels monster truck that can handle the toughest tracks and stunts.",
+    "pictureURL": "/HotWheelsMonsterTruck.png",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Barbie Dreamhouse Doll Set",
+    "sellerName": "Happy Toys",
+    "sellerEmail": "info@happytoys.com",
+    "price": 89.99,
+    "rating": 4.8,
+    "availableQuantity": 40,
+    "description": "A luxurious Barbie Dreamhouse featuring furniture, lighting effects, and interactive rooms for imaginative play.",
+    "pictureURL": "/BarbieDreamhouseDoll.png",
+    "subCategory": "Dolls"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Nerf Elite Blaster",
+    "sellerName": "Toy Arsenal",
+    "sellerEmail": "support@toyasrsenal.com",
+    "price": 29.99,
+    "rating": 4.6,
+    "availableQuantity": 65,
+    "description": "High-performance Nerf blaster for epic battles. Includes soft foam darts and a quick reload mechanism.",
+    "pictureURL": "/NerfEliteBlaster.png",
+    "subCategory": "Action Toys"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Rubik's Cube 3x3",
+    "sellerName": "Puzzle Planet",
+    "sellerEmail": "help@puzzleplanet.com",
+    "price": 9.99,
+    "rating": 4.4,
+    "availableQuantity": 200,
+    "description": "A classic 3x3 Rubik's Cube that challenges the mind and improves memory, logic, and patience.",
+    "pictureURL": "/RubiksCube3x3.png",
+    "subCategory": "Puzzles"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Play-Doh Color Pack",
+    "sellerName": "Creative Kids Store",
+    "sellerEmail": "support@creativekids.com",
+    "price": 19.99,
+    "rating": 4.3,
+    "availableQuantity": 150,
+    "description": "A vibrant pack of Play-Doh colors for kids to mold, shape, and design their creative masterpieces.",
+    "pictureURL": "/PlayDohColorPack.png",
+    "subCategory": "Creative Toys"
+  }
+]
