@@ -7,7 +7,7 @@ import { RxAvatar } from "react-icons/rx";
 
 const Navbar = () => {
   const { user, handleSignout } = useContext(AuthContext);
-  console.log(user?.photoURL);
+  console.log(user);
 
   return (
     <>
@@ -77,7 +77,7 @@ const Navbar = () => {
             {user ? (
               <div className="flex justify-between items-center gap-2">
                 <div
-                  data-tip={user.displayName}
+                  data-tip={user.displayName || "No Name"}
                   className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom tooltip-success"
                 >
                   {user.photoURL ? (
@@ -85,7 +85,9 @@ const Navbar = () => {
                       <img src={user.photoURL} />
                     </div>
                   ) : (
-                    <RxAvatar className="text-3xl" />
+                    <div className="w-10 rounded-full">
+                      <img src="https://img.icons8.com/?size=100&id=fUUEbUbXhzOA&format=png&color=ffffff" />
+                    </div>
                   )}
                 </div>
                 <button

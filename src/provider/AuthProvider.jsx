@@ -1,12 +1,17 @@
 import {
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
   onAuthStateChanged,
+  signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.init";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext(null);
+const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -21,36 +26,76 @@ const AuthProvider = ({ children }) => {
         console.error(error);
       });
   };
-  const handleRegister = async (email, password) => {
+
+  const handleRegister = async (email, password, displayName, photoURL) => {
     try {
       const result = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
-      setUser(result.user);
+
+      await updateProfile(result.user, {
+        displayName,
+        photoURL,
+      });
+
+      setUser({
+        ...result.user,
+        displayName,
+        photoURL,
+      });
+      toast.success("🎉 Your account has been successfully created!");
       return result;
     } catch (error) {
       switch (error.code) {
         case "auth/user-disabled":
-          alert("Your account has been disabled. Please contact support.");
+          toast.error(
+            "Your account has been disabled. Please contact support."
+          );
           break;
         case "auth/popup-closed-by-user":
-          alert("Sign-in cancelled. Please try again.");
+          toast.error("Sign-in cancelled. Please try again.");
           break;
         case "auth/network-request-failed":
-          alert("Network error. Check your connection and try again.");
+          toast.error("Network error. Check your connection and try again.");
           break;
         case "auth/email-already-in-use":
-          alert(
+          toast.error(
             "This email is already registered. Please log in or use a different email."
           );
           break;
         default:
-          alert(error.message);
+          toast.error(error.message);
           break;
       }
       return false;
+    }
+  };
+
+  const handleSignin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      setUser(user);
+      return result;
+    } catch (error) {
+      switch (error.code) {
+        case "auth/user-disabled":
+          toast.error(
+            "Your account has been disabled. Please contact support."
+          );
+          break;
+        case "auth/popup-closed-by-user":
+          toast.error("Sign-in cancelled. Please try again.");
+          break;
+        case "auth/network-request-failed":
+          toast.error("Network error. Check your connection and try again.");
+          break;
+        default:
+          toast.error("An unexpected error occurred. Please try again later.");
+          break;
+      }
     }
   };
 
@@ -67,7 +112,14 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  const value = { user, setUser, loading, handleSignout, handleRegister };
+  const value = {
+    user,
+    setUser,
+    loading,
+    handleSignout,
+    handleRegister,
+    handleSignin,
+  };
   return <AuthContext value={value}>{children}</AuthContext>;
 };
 
