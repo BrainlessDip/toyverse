@@ -1,8 +1,27 @@
 import React, { useContext } from "react";
 import { AuthContext } from "./../provider/AuthProvider";
+import { updateProfile } from "@firebase/auth";
+import auth from "../firebase/firebase.init";
+import { toast } from "react-toastify";
 
 const Profile = () => {
-  const { user } = useContext(AuthContext);
+  const { user, setUser } = useContext(AuthContext);
+
+  const handleUpdateProfile = async (e) => {
+    e.preventDefault();
+    const displayName = e.target.name.value;
+    const photoURL = e.target.photoURL.value;
+    try {
+      await updateProfile(auth.currentUser, {
+        displayName,
+        photoURL,
+      });
+      setUser({ ...auth.currentUser });
+      toast.success("Profile updated successfully!");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <div className="flex justify-center items-center flex-col gap-4 my-10">
@@ -20,7 +39,7 @@ const Profile = () => {
         <div className="bg-base-200 border-base-300 rounded-box rounded-3xl shadow-md w-xs border p-4 flex justify-between items-start flex-col gap-5">
           <fieldset>
             <legend className="fieldset-legend text-2xl">Change Profile</legend>
-            <form>
+            <form onSubmit={handleUpdateProfile}>
               <label className="label">Name</label>
               <input
                 type="text"
@@ -28,6 +47,7 @@ const Profile = () => {
                 name="name"
                 defaultValue={user.displayName}
                 placeholder="Name"
+                required
               />
               <label className="label">Photo URL</label>
               <input
@@ -36,6 +56,7 @@ const Profile = () => {
                 name="photoURL"
                 defaultValue={user.photoURL}
                 placeholder="Photo URL"
+                required
               />
               <button className="btn btn-neutral mt-4 w-full">Change</button>
             </form>
