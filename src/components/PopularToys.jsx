@@ -9,9 +9,9 @@ const PopularToys = ({ toys }) => {
         <div className="w-28 h-1 mx-auto mt-2 bg-linear-to-r from-blue-600 to-blue-800 rounded-full shadow-md"></div>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {toys.map((toy) => (
-          <ToyCard toy={toy} />
+          <ToyCard key={toy.toyId} toy={toy} />
         ))}
       </div>
     </div>

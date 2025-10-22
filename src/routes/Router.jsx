@@ -4,6 +4,7 @@ import Root from "../layout/Root";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import axios from "axios";
+import ToyDetails from "../pages/ToyDetails";
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,13 @@ export const router = createBrowserRouter([
       {
         Component: Home,
         path: "/",
+        loader: async () => {
+          return axios(`/data.json`);
+        },
+      },
+      {
+        Component: ToyDetails,
+        path: "/:toyId",
         loader: async () => {
           return axios(`/data.json`);
         },
