@@ -12,12 +12,19 @@ const Profile = () => {
     const displayName = e.target.name.value;
     const photoURL = e.target.photoURL.value;
     try {
-      await updateProfile(auth.currentUser, {
+      const update = updateProfile(auth.currentUser, {
         displayName,
         photoURL,
       });
+
+      toast.promise(update, {
+        pending: "Promise is pending",
+        success: "Profile updated successfully!",
+        error: "Promise rejected 🤯",
+      });
+
+      await update;
       setUser({ ...auth.currentUser });
-      toast.success("Profile updated successfully!");
     } catch (error) {
       console.log(error);
     }
