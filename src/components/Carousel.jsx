@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Carousel = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <div className="w-11/12 mx-auto my-5">
       <div className="carousel w-full">
@@ -10,7 +19,10 @@ const Carousel = () => {
               src="/LegoClassicBricks.png"
               className="max-h-[392px] max-w-[392px]  object-contain"
             />
-            <h1 className="text-2xl font-bold text-white tracking-wide -mt-15">
+            <h1
+              className="text-2xl font-bold text-white tracking-wide -mt-15"
+              data-aos="fade-up"
+            >
               Lego Classic Bricks
             </h1>
           </div>
@@ -29,7 +41,10 @@ const Carousel = () => {
               src="/HotWheelsMonsterTruck.png"
               className="max-h-[392px] max-w-[392px]  object-contain"
             />
-            <h1 className="text-2xl font-bold text-white tracking-wide -mt-15">
+            <h1
+              className="text-2xl font-bold text-white tracking-wide -mt-15"
+              data-aos="fade-up"
+            >
               Hot Wheels Monster Truck
             </h1>
           </div>
@@ -48,7 +63,10 @@ const Carousel = () => {
               src="/RubiksCube3x3.png"
               className="max-h-[392px] max-w-[392px]  object-contain"
             />
-            <h1 className="text-2xl font-bold text-white tracking-wide -mt-5">
+            <h1
+              className="text-2xl font-bold text-white tracking-wide -mt-5"
+              data-aos="fade-up"
+            >
               Rubik's Cube 3x3
             </h1>
           </div>

@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CiStar } from "react-icons/ci";
 import { Link } from "react-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ToyCard = ({ toy }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <div>
-      <div className="card bg-base-200 w-fit shadow-md rounded-md hover:ring-offset-1">
+      <div
+        className="card bg-base-200 w-fit shadow-md rounded-md hover:ring-offset-1"
+        data-aos="fade-up"
+      >
         <h2 className=" font-bold text-2xl mt-4 text-center text-white">
           {toy.toyName}
         </h2>
@@ -28,7 +40,7 @@ const ToyCard = ({ toy }) => {
         </figure>
         <div className="px-5 pb-5">
           <div className="card-actions justify-end">
-            <Link to={`/${toy.toyId}`} className="btn btn-primary">
+            <Link to={`/toy/${toy.toyId}`} className="btn btn-primary">
               View More
             </Link>
           </div>

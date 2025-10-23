@@ -1,11 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AuthContext } from "./../provider/AuthProvider";
 import { updateProfile } from "@firebase/auth";
 import auth from "../firebase/firebase.init";
 import { toast } from "react-toastify";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Profile = () => {
   const { user, setUser } = useContext(AuthContext);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
 
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
@@ -32,7 +41,10 @@ const Profile = () => {
   return (
     <>
       <div className="flex justify-center items-center flex-col gap-4 my-10">
-        <div className="bg-base-200 border-base-300 rounded-box rounded-3xl shadow-md w-xs border p-4 flex justify-between items-center flex-col gap-5">
+        <div
+          className="bg-base-200 border-base-300 rounded-box rounded-3xl shadow-md w-xs border p-4 flex justify-between items-center flex-col gap-5"
+          data-aos="fade-up"
+        >
           <img
             src={
               user.photoURL ||
@@ -43,7 +55,10 @@ const Profile = () => {
           <h1>{user.displayName}</h1>
           <h1>Email: {user.email || "Not available"}</h1>
         </div>
-        <div className="bg-base-200 border-base-300 rounded-box rounded-3xl shadow-md w-xs border p-4 flex justify-between items-start flex-col gap-5">
+        <div
+          className="bg-base-200 border-base-300 rounded-box rounded-3xl shadow-md w-xs border p-4 flex justify-between items-start flex-col gap-5"
+          data-aos="fade-down"
+        >
           <fieldset>
             <legend className="fieldset-legend text-2xl">Change Profile</legend>
             <form onSubmit={handleUpdateProfile}>

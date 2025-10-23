@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
         },
       },
       {
-        path: "/:toyId",
+        path: "/toy/:toyId",
         element: (
           <PrivateRoute>
             <ToyDetails />
@@ -64,10 +64,10 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      {
-        path: "/*",
-        Component: NotFound,
-      },
     ],
+  },
+  {
+    path: "/*",
+    Component: NotFound,
   },
 ]);
