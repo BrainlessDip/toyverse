@@ -1,16 +1,30 @@
-# React + Vite
+# Toy Verse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose
 
-Currently, two official plugins are available:
+Toy Verse is a modern, responsive React application designed to showcase toys in an interactive and engaging way. The app uses Vite for fast builds, TailwindCSS for styling, and various React libraries for dynamic functionality
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live URL
 
-## React Compiler
+[Live Demo](https://toyverse.netlify.app)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
 
-## Expanding the ESLint configuration
+- **Responsive Design**: Built with TailwindCSS and DaisyUI for mobile-first responsiveness.
+- **Animations**: Smooth scroll animations powered by [AOS](https://michalsnik.github.io/aos/).
+- **Routing**: Client-side routing using `react-router` for a seamless SPA experience.
+- **Loading Indicators**: Display loaders using `react-spinners`.
+- **Notifications**: Toast notifications implemented with `react-toastify`.
+- **Interactive Icons**: Rich set of icons via `react-icons`.
+- **Optimized Build**: Powered by Vite for fast development and production builds.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Dependencies
+
+- `react` & `react-dom` – Core React library
+- `react-router` – SPA routing
+- `axios` – HTTP requests
+- `react-icons` – Icon components
+- `react-toastify` – Toast notifications
+- `react-spinners` – Loading indicators
+- `tailwindcss` & `@tailwindcss/vite` – Utility-first CSS framework
+- `aos` – Animate on scroll
