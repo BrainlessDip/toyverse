@@ -8,9 +8,9 @@ import ToyDetails from "../pages/ToyDetails";
 import Loading from "../components/Loading";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../pages/NotFound";
-import About from "../pages/About";
 import Profile from "../pages/Profile";
 import ForgetPassword from "../pages/ForgetPassword";
+import Feedback from "../pages/Feedback";
 
 export const router = createBrowserRouter([
   {
@@ -57,10 +57,10 @@ export const router = createBrowserRouter([
         Component: ForgetPassword,
       },
       {
-        path: "/about",
+        path: "/feedback",
         element: (
           <PrivateRoute>
-            <About />
+            <Feedback />
           </PrivateRoute>
         ),
       },

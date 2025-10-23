@@ -43,8 +43,8 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/about"} className="text-[20px]">
-                    About
+                  <NavLink to={"/feedback"} className="text-[20px]">
+                    Feedback
                   </NavLink>
                 </li>
                 {user && (
@@ -68,8 +68,8 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to={"/about"} className="text-[20px]">
-                  About
+                <NavLink to={"/feedback"} className="text-[20px]">
+                  Feedback
                 </NavLink>
               </li>
               {user && (
