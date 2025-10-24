@@ -12,7 +12,7 @@ const Carousel = () => {
 
   return (
     <div className="w-11/12 mx-auto">
-      <div className="carousel w-full">
+      <div className="carousel overflow-hidden w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <div className="flex flex-col justify-center items-center h-full w-full">
             <img
