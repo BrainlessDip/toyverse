@@ -8,7 +8,7 @@
     "rating": 4.7,
     "availableQuantity": 75,
     "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
-    "pictureURL": "/LegoClassicBricks.png",
+    "pictureURL": "https://i.ibb.co.com/ZzCgqsk7/Lego-Classic-Bricks.png",
     "subCategory": "Building Blocks"
   },
   {
@@ -20,7 +20,7 @@
     "rating": 4.5,
     "availableQuantity": 120,
     "description": "A durable and exciting Hot Wheels monster truck that can handle the toughest tracks and stunts.",
-    "pictureURL": "/HotWheelsMonsterTruck.png",
+    "pictureURL": "https://i.ibb.co.com/VWFwZ31c/Hot-Wheels-Monster-Truck.png",
     "subCategory": "Vehicles"
   },
   {
@@ -32,7 +32,7 @@
     "rating": 4.8,
     "availableQuantity": 40,
     "description": "A luxurious Barbie Dreamhouse featuring furniture, lighting effects, and interactive rooms for imaginative play.",
-    "pictureURL": "/BarbieDreamhouseDoll.png",
+    "pictureURL": "https://i.ibb.co.com/vpRNWX0/Barbie-Dreamhouse-Doll.png",
     "subCategory": "Dolls"
   },
   {
@@ -44,7 +44,7 @@
     "rating": 4.6,
     "availableQuantity": 65,
     "description": "High-performance Nerf blaster for epic battles. Includes soft foam darts and a quick reload mechanism.",
-    "pictureURL": "/NerfEliteBlaster.png",
+    "pictureURL": "https://i.ibb.co.com/zTtqZyjd/Nerf-Elite-Blaster.png",
     "subCategory": "Action Toys"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.4,
     "availableQuantity": 200,
     "description": "A classic 3x3 Rubik's Cube that challenges the mind and improves memory, logic, and patience.",
-    "pictureURL": "/RubiksCube3x3.png",
+    "pictureURL": "https://i.ibb.co.com/RT9p6Kfd/Rubiks-Cube3x3.png",
     "subCategory": "Puzzles"
   },
   {
@@ -68,7 +68,7 @@
     "rating": 4.3,
     "availableQuantity": 150,
     "description": "A vibrant pack of Play-Doh colors for kids to mold, shape, and design their creative masterpieces.",
-    "pictureURL": "/PlayDohColorPack.png",
+    "pictureURL": "https://i.ibb.co.com/LqKF6Wk/Play-Doh-Color-Pack.png",
     "subCategory": "Creative Toys"
   }
 ]

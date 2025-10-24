@@ -11,13 +11,13 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="w-11/12 mx-auto my-5">
+    <div className="w-11/12 mx-auto">
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <div className="flex flex-col justify-center items-center h-full w-full">
             <img
-              src="/LegoClassicBricks.png"
-              className="max-h-[392px] max-w-[392px]  object-contain"
+              src="https://i.ibb.co.com/ZzCgqsk7/Lego-Classic-Bricks.png"
+              className="h-[392px] w-[392px]  object-contain"
             />
             <h1
               className="text-2xl font-bold text-white tracking-wide -mt-15"
@@ -38,7 +38,7 @@ const Carousel = () => {
         <div id="slide2" className="carousel-item relative w-full">
           <div className="flex flex-col justify-center items-center h-full w-full">
             <img
-              src="/HotWheelsMonsterTruck.png"
+              src="https://i.ibb.co.com/VWFwZ31c/Hot-Wheels-Monster-Truck.png"
               className="max-h-[392px] max-w-[392px]  object-contain"
             />
             <h1
@@ -60,7 +60,7 @@ const Carousel = () => {
         <div id="slide3" className="carousel-item relative w-full">
           <div className="flex flex-col justify-center items-center h-full w-full">
             <img
-              src="/RubiksCube3x3.png"
+              src="https://i.ibb.co.com/RT9p6Kfd/Rubiks-Cube3x3.png"
               className="max-h-[392px] max-w-[392px]  object-contain"
             />
             <h1

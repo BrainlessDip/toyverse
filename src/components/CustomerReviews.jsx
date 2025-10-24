@@ -67,8 +67,8 @@ const CustomerReviews = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center">
-        {reviews.map((review) => (
-          <ReviewCard data={review}></ReviewCard>
+        {reviews.map((review, index) => (
+          <ReviewCard key={index} data={review}></ReviewCard>
         ))}
       </div>
     </div>
