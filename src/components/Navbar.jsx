@@ -7,9 +7,9 @@ const Navbar = () => {
   const { user, handleSignout } = useContext(AuthContext);
 
   return (
-    <>
+    <div>
       <Container>
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-200/80 backdrop-blur-md shadow-sm rounded-full px-10">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -115,7 +115,7 @@ const Navbar = () => {
           </div>
         </div>
       </Container>
-    </>
+    </div>
   );
 };
 
