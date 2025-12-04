@@ -11,6 +11,7 @@ import NotFound from "../pages/NotFound";
 import Profile from "../pages/Profile";
 import ForgetPassword from "../pages/ForgetPassword";
 import Feedback from "../pages/Feedback";
+import AllItems from "../pages/AllItems";
 
 export const router = createBrowserRouter([
   {
@@ -55,6 +56,13 @@ export const router = createBrowserRouter([
       {
         path: "/forget-password",
         Component: ForgetPassword,
+      },
+      {
+        path: "/all-items",
+        Component: AllItems,
+        loader: async () => {
+          return axios(`/data.json`);
+        },
       },
       {
         path: "/feedback",

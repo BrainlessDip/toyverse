@@ -70,5 +70,77 @@
     "description": "A vibrant pack of Play-Doh colors for kids to mold, shape, and design their creative masterpieces.",
     "pictureURL": "https://i.ibb.co.com/LqKF6Wk/Play-Doh-Color-Pack.png",
     "subCategory": "Creative Toys"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Magnetic Building Tiles Set",
+    "sellerName": "Smart Kids Market",
+    "sellerEmail": "shop@smartkidsmarket.com",
+    "price": 39.99,
+    "rating": 4.6,
+    "availableQuantity": 90,
+    "description": "A colorful set of magnetic tiles that snap together, letting kids build towers, castles, and geometric shapes with ease.",
+    "pictureURL": "https://i.ibb.co.com/ZzCgqsk7/Lego-Classic-Bricks.png",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Remote Control Racing Car",
+    "sellerName": "Velocity Toys",
+    "sellerEmail": "contact@velocitytoys.com",
+    "price": 24.99,
+    "rating": 4.5,
+    "availableQuantity": 110,
+    "description": "A fast and responsive RC racing car built for thrilling indoor and outdoor speed runs.",
+    "pictureURL": "https://i.ibb.co.com/VWFwZ31c/Hot-Wheels-Monster-Truck.png",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 9,
+    "toyName": "Princess Fashion Doll Set",
+    "sellerName": "Royal Playhouse",
+    "sellerEmail": "info@royalplayhouse.com",
+    "price": 32.5,
+    "rating": 4.7,
+    "availableQuantity": 55,
+    "description": "A premium princess doll with swappable gowns, accessories, and a mini vanity for creative pretend play.",
+    "pictureURL": "https://i.ibb.co.com/vpRNWX0/Barbie-Dreamhouse-Doll.png",
+    "subCategory": "Dolls"
+  },
+  {
+    "toyId": 10,
+    "toyName": "Super Foam Dart Blaster",
+    "sellerName": "BattleZone Toys",
+    "sellerEmail": "support@battlezonetoys.com",
+    "price": 22.99,
+    "rating": 4.3,
+    "availableQuantity": 80,
+    "description": "A lightweight foam dart blaster with extended range and soft-impact darts for safe action play.",
+    "pictureURL": "https://i.ibb.co.com/zTtqZyjd/Nerf-Elite-Blaster.png",
+    "subCategory": "Action Toys"
+  },
+  {
+    "toyId": 11,
+    "toyName": "Brain Teaser Cube Set",
+    "sellerName": "Puzzle Wizards",
+    "sellerEmail": "hello@puzzlewizards.com",
+    "price": 14.99,
+    "rating": 4.2,
+    "availableQuantity": 140,
+    "description": "A set of four mini brain-teaser cubes designed to push memory, strategy, and problem-solving skills.",
+    "pictureURL": "https://i.ibb.co.com/RT9p6Kfd/Rubiks-Cube3x3.png",
+    "subCategory": "Puzzles"
+  },
+  {
+    "toyId": 12,
+    "toyName": "Clay Art Sculpting Kit",
+    "sellerName": "Crafty Minds Studio",
+    "sellerEmail": "care@craftyminds.com",
+    "price": 27.99,
+    "rating": 4.4,
+    "availableQuantity": 100,
+    "description": "A sculpting kit with soft clay, shaping tools, color mixes, and texture stamps for creative minds.",
+    "pictureURL": "https://i.ibb.co.com/LqKF6Wk/Play-Doh-Color-Pack.png",
+    "subCategory": "Creative Toys"
   }
 ]

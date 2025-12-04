@@ -43,16 +43,30 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/feedback"} className="text-[20px]">
-                    Feedback
+                  <NavLink to={"/all-items"} className="text-[20px]">
+                    All Items
                   </NavLink>
                 </li>
+
                 {user && (
-                  <li>
-                    <NavLink to={"/profile"} className="text-[20px]">
-                      My Profile
-                    </NavLink>
-                  </li>
+                  <>
+                    <li>
+                      <NavLink to={"/feedback"} className="text-[20px]">
+                        Feedback
+                      </NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink to={"/about-us"} className="text-[20px]">
+                        About us
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={"/profile"} className="text-[20px]">
+                        My Profile
+                      </NavLink>
+                    </li>
+                  </>
                 )}
               </ul>
             </div>
@@ -67,17 +81,33 @@ const Navbar = () => {
                   Home
                 </NavLink>
               </li>
+
               <li>
-                <NavLink to={"/feedback"} className="text-[20px]">
-                  Feedback
+                <NavLink to={"/all-items"} className="text-[20px]">
+                  All Items
                 </NavLink>
               </li>
+
               {user && (
-                <li>
-                  <NavLink to={"/profile"} className="text-[20px]">
-                    My Profile
-                  </NavLink>
-                </li>
+                <>
+                  <li>
+                    <NavLink to={"/feedback"} className="text-[20px]">
+                      Feedback
+                    </NavLink>
+                  </li>
+
+                  <li>
+                    <NavLink to={"/about-us"} className="text-[20px]">
+                      About us
+                    </NavLink>
+                  </li>
+
+                  <li>
+                    <NavLink to={"/profile"} className="text-[20px]">
+                      My Profile
+                    </NavLink>
+                  </li>
+                </>
               )}
             </ul>
           </div>

@@ -41,7 +41,7 @@ const ToyCard = ({ toy }) => {
         <div className="px-5 pb-5">
           <div className="card-actions justify-end">
             <Link to={`/toy/${toy.toyId}`} className="btn btn-primary">
-              View More
+              See More
             </Link>
           </div>
         </div>
