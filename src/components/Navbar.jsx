@@ -70,8 +70,12 @@ const Navbar = () => {
                 )}
               </ul>
             </div>
-            <Link to={"/"} className="btn btn-ghost text-xl">
-              Toy Verse
+            <Link to="/" className="flex items-center gap-2 text-xl font-bold">
+              <img
+                src="/logo.png"
+                className="w-16 h-16 object-contain"
+                alt="Toy Verse Logo"
+              />
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">

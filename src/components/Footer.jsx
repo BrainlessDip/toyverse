@@ -5,7 +5,13 @@ import { IoMailOutline } from "react-icons/io5";
 const Footer = () => {
   return (
     <footer className="bg-base-200 text-white pt-5 pb-8 px-6 md:px-20">
-      <h1 className="text-center text-3xl mb-5 font-semibold">Toy Verse</h1>
+      <div className="flex justify-center items-center">
+        <img
+          src="/logo.png"
+          className="w-32 h-32 object-contain"
+          alt="Toy Verse Logo"
+        />
+      </div>
       <div className="flex flex-col md:flex-row md:justify-evenly gap-12 md:gap-6">
         <div className="flex space-x-8 justify-start items-start">
           <div>

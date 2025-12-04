@@ -28,11 +28,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/toy/:toyId",
-        element: (
-          <PrivateRoute>
-            <ToyDetails />
-          </PrivateRoute>
-        ),
+        Component: ToyDetails,
         loader: async () => {
           return axios(`/data.json`);
         },
